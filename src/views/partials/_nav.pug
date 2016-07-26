@@ -1,0 +1,14 @@
+nav
+  ul.nav.nav-pills.pull-right
+    li(role='presentation')
+      a(href='/') Home
+
+    if username
+      li(role='presentation')
+        a(href='/logout') Log-Out
+    else
+      li(role='presentation')
+        a(href="/register") Register
+      li(role='presentation')
+        a(href="/login") Log-In
+h3.text-muted Log-In APP

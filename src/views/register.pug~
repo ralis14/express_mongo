@@ -1,0 +1,29 @@
+extends layouts/layout.pug
+block content
+  if errors
+    for error in errors
+      p.errors #{error.msg}
+
+  form(role='form', method='post', action='/register')
+
+    .form-group
+      label(for='firstName') First Name
+      input(type='text', placeholder='Enter First Name', name='firstName').form-control#firstName
+
+    .form-group
+      label(for='lastName') Last Name
+      input(type='text', placeholder='Enter Last Name', name='lastName').form-control#lastName
+
+    .form-group
+      label(for='email') Email
+      input(type='text', placeholder='Enter Email Address', name='username').form-control#email
+
+    .form-group
+      label(for='password') Password
+      input(type='password', placeholder='Enter Password', name='password').form-control#password
+
+    .form-group
+      label(for='confirmPassword') Confirm Password
+      input(type='password', placeholder='RE-enter Password', name='confirmPassword').form-control#confirmPassword
+
+    button(type='submit').btn.btn-default Submit

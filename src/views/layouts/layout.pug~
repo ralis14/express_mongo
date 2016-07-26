@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+  head
+    title My Title
+    link(href='/static/css/bootstrap.css', rel='stylesheet')
+    link(href='/static/css/style.css', rel='stylesheet')
+  body
+    .container
+      .header.clearfix
+        include ../partials/_nav.pug 
+        block content
+        include ../partials/_footer.pug
+        script(src='/static/js/bootstrap.js')
+

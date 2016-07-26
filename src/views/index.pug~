@@ -1,0 +1,7 @@
+extends layouts/layout.pug 
+block content
+     if username
+        p Hello #{username}
+     | My Body is here
+     | and here too
+     | and here is more
