@@ -31,6 +31,7 @@ app.set('views', __dirname + '/views')
 app.set('view options', {pretty: true});
 
 //setup parsers
+app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(expressValidator());
