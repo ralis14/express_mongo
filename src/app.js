@@ -14,7 +14,8 @@ let cookieParser  =require('cookie-parser'),
     localStrategy = require('passport-local').Strategy;
 
  //mongoose connection
-mongoose.connect('mongodb://localhost/one');
+let dburi = process.env.MONGODB_URI || 'mongodb://localhost/one';
+mongoose.connect(dburi);
 let db = mongoose.connection;
 
 //creating the app and setting port
